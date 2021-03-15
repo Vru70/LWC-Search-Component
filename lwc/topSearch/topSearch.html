@@ -1,0 +1,36 @@
+<!--
+  @description       : 
+  @author            : Vrushabh Uprikar
+  @group             : 
+  @last modified on  : 03-01-2021
+  @last modified by  : Vrushabh Uprikar
+  Modifications Log 
+  Ver   Date         Author             Modification
+  1.0   03-01-2021   Vrushabh Uprikar   Initial Version
+-->
+<template>
+    <lightning-card title="Search" >
+        <div class="slds-grid slds-gutters slds-m-around_xxx-small">
+            <div class="slds-form-element slds-col">
+                <label class="slds-form-element__label" for="AccountName">Account Name</label>
+                <div class="slds-form-element__control">
+                  <input type="text" id="AccountName" placeholder="Enter Account Name" onchange={handleAcc} class="slds-input" />
+                </div>
+            </div>
+            <div class="slds-form-element slds-col">
+                <label class="slds-form-element__label" for="VINNumber">VIN Number</label>
+                <div class="slds-form-element__control">
+                  <input type="text" id="VINNumber" placeholder="Enter VIN Number" onchange={handleVIN} class="slds-input" />
+                </div>
+            </div>
+            <div class="slds-col slds-form-element ">
+                <label class="slds-form-element__label">&nbsp;</label>
+                <div class="slds-form-element__control">
+                    <button class="slds-button slds-button_success" onclick={handleSearch}>Search</button>
+                </div>
+                
+            </div>
+              
+        </div>
+    </lightning-card>
+</template>

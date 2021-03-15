@@ -1,0 +1,37 @@
+<!--
+  @description       : 
+  @author            : Vrushabh Uprikar
+  @group             : 
+  @last modified on  : 03-02-2021
+  @last modified by  : Vrushabh Uprikar
+  Modifications Log 
+  Ver   Date         Author             Modification
+  1.0   03-01-2021   Vrushabh Uprikar   Initial Version
+-->
+<template>
+    <lightning-card  variant="Narrow"  title="Person Account" icon-name="standard:account">
+        <template if:true={accdata} for:each={accdata} for:item="con"> 
+            <div key={con.Id}>
+                <div class="slds-m-around_xx-small slds-box">
+                    <div class="slds-form-element slds-col">
+                        <label class="slds-form-element__label" for="Name">Name : {con.Name}</label>
+                    </div>
+                    <div class="slds-form-element slds-col">
+                        <label class="slds-form-element__label" for="Email__c">Email : {con.Email__c}</label>
+                    </div>
+                    <div class="slds-form-element slds-col">
+                        <label class="slds-form-element__label" for="Phone">Phone : {con.Phone}</label>
+                    </div>
+                    <div class="slds-form-element slds-col">
+                        <label class="slds-form-element__label" for="Address">Address : {con.BillingAddress.street},
+                            {con.BillingAddress.city}, {con.BillingAddress.state}</label>
+                    </div>
+                    <div class="slds-form-element slds-col">
+                        <label class="slds-form-element__label" for="Number">VIN Number : {con.VIN_Number__c}</label>
+                    </div>
+                                                   
+                </div>
+            </div>           
+        </template>    
+    </lightning-card>
+</template>

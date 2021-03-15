@@ -1,0 +1,39 @@
+<!--
+  @description       : 
+  @author            : Vrushabh Uprikar
+  @group             : 
+  @last modified on  : 03-02-2021
+  @last modified by  : Vrushabh Uprikar
+  Modifications Log 
+  Ver   Date         Author             Modification
+  1.0   03-02-2021   Vrushabh Uprikar   Initial Version
+-->
+<template>
+    <lightning-card  variant="Narrow"  title="Repair" icon-name="custom:custom19">
+        <template if:true={reqdata} for:each={reqdata} for:item="con"> 
+            <div key={con.Id}>
+                <div class="slds-m-around_xx-small slds-box">
+                    <div class="slds-form-element slds-col">
+                        <label class="slds-form-element__label" for="RepairNumber">Repair Number : {con.Name}</label>
+                    </div>
+                    <div class="slds-form-element slds-col">
+                        <label class="slds-form-element__label" for="Service_Contract">Service Contract : {con.Service_Contract__r.Name}</label>
+                    </div>
+                    <div class="slds-form-element slds-col">
+                        <label class="slds-form-element__label" for="Customer">Customer : {con.Customer__r.Name}</label>
+                    </div>
+                    <div class="slds-form-element slds-col">
+                        <label class="slds-form-element__label" for="Coverage">Coverage : {con.Coverage__r.Name}</label>
+                    </div>
+                    <div class="slds-form-element slds-col">
+                        <label class="slds-form-element__label" for="Status">Status : {con.Status__c}</label>
+                    </div>
+                    <div class="slds-form-element slds-col">
+                        <label class="slds-form-element__label" for="Description">Description : {con.Description__c}</label>
+                    </div>
+                                              
+                </div>
+            </div>           
+        </template>    
+    </lightning-card>
+</template>
